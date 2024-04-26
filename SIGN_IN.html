@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In Page</title>
+    <style>
+        /* Your existing CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #001f3f; /* Navy Blue */
+            color: #00bcd4; /* Cyan */
+            position: relative; /* Added for absolute positioning */
+            min-height: 100vh; /* Added for absolute positioning */
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #001f3f; /* Navy Blue */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #001f3f; /* Navy Blue */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #003366; /* Darker Navy Blue */
+        }
+
+        /* Updated styles for doodle images */
+        .doodle-images {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .doodle-img {
+            width: 200px; /* Updated width to make images twice as big */
+            height: auto;
+            cursor: pointer;
+            margin: 0 20px;
+            border-radius: 50%;
+        }
+
+        /* Style for register button */
+        .register-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-button a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #001f3f; /* Navy Blue */
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .register-button a:hover {
+            background-color: #003366; /* Darker Navy Blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Log In</h2>
+        <form method="post" action="login.php" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" name="login">Log In</button>
+            </div>
+        </form>
+        
+        <!-- Register button -->
+        <div class="register-button">
+            <a href="SIGN_UP.html">Register</a>
+        </div>
+    </div>
+
+    <!-- Updated doodle images -->
+    <div class="doodle-images">
+        <img class="doodle-img" src="doodle1.jpeg" alt="Football Doodle 1">
+        <img class="doodle-img" src="doodle2.jpeg" alt="Football Doodle 2">
+        <img class="doodle-img" src="doodle3.jpeg" alt="Football Doodle 3">
+    </div>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+            
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 8 characters long and contain at least one digit, one lowercase letter, and one uppercase letter.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

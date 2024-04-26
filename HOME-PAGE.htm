@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Hub</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('football-field.jpg') center/cover no-repeat fixed;
+            color: #fff;
+        }
+
+        header {
+            background: rgba(0, 0, 50, 0.7);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #66a3ff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #008080;
+        }
+
+        section {
+            padding: 20px;
+            background: rgba(0, 0, 50, 0.7);
+            margin-top: 20px;
+        }
+
+        .contact-feedback {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .quick-facts button,
+        .contact-feedback button {
+            background-color: #00FFFF;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .quick-facts button:hover,
+        .contact-feedback button:hover {
+            background-color: #008080;
+        }
+
+        .flip-container {
+            perspective: 1000px;
+            margin-top: 20px;
+        }
+
+        .flip-box {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .flip-box:hover {
+            transform: rotateY(180deg);
+        }
+
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+
+        .flip-box-front,
+        .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-box-front {
+            background: rgba(0, 0, 50, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-box-back {
+            background: rgba(0, 0, 50, 0.8);
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            text-decoration: none;
+            background-color: #00FFFF;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #008080;
+        }
+
+        /* Added styles for dropdown content */
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+            max-width: 300px;
+        }
+
+        .image-container:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content p {
+            margin: 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="color: #66a3ff;">Football Hub</h1>
+    <!-- Navigation bar -->
+    <nav>
+        <a href="company-profile.html">Company Profile</a>
+        <a href="course-registration.html">Course Registration</a>
+        <a href="interactive-learning.html">Interactive Learning</a>
+        <a href="assessment.html">Assessment</a>
+        <a href="feedback-contact.html">Feedback & Contact</a>
+    </nav>
+    <!-- Login button -->
+    <a href="SIGN_IN.html" class="login-button">Login</a>
+    <!-- End of login button -->
+    <!-- Content paragraphs -->
+    <p>Welcome to Football Hub, your premier destination for all things football! Immerse yourself in the exciting world of the beautiful game as we bring you comprehensive information on various aspects of football. From the intricacies of player positions to the thrill of game rules, we've got it all covered.</p>
+    <p>Explore in-depth details about football grounds, gain insights into player positions, and dive into the fascinating world of game rules that make football the globally beloved sport it is today. Discover the legends and rising stars through our Top Players section, where we celebrate the excellence and talent that defines the game.</p>
+    <p>Quick Facts add a touch of fun and knowledge, providing intriguing snippets about football that you might not know. Uncover hidden gems and fascinating trivia to share with your fellow football enthusiasts!</p>
+    <p>Our mission is to share the passion for football, fostering an environment where everyone can learn, appreciate, and enjoy the sport. We envision a world where football becomes a unifying force, bringing people together across borders and cultures.</p>
+    <p>Ready to embark on this football journey with us? Let Football Hub be your go-to source for all things football-related. Kick back, relax, and let the excitement unfold!</p>
+    <!-- End of content paragraphs -->
+</header>
+
+<section id="ground-details">
+    <h2>Ground Details</h2>
+    <!-- content related to ground details -->
+    <div class="image-container">
+        <img src="ground-details-image.jpeg" alt="Ground Details Image">
+        <div class="dropdown-content">
+            <p><strong>Ground Size:</strong> The size of a football ground can vary, but it typically ranges from 100 yards to 130 yards in length and 50 yards to 100 yards in width.</p>
+            <p><strong>Setting:</strong> Football grounds are designed to provide an optimal playing surface for the game. They often feature grass or artificial turf, surrounded by seating for spectators.</p>
+        </div>
+    </div>
+</section>
+
+<section id="player-position">
+    <h2>Player Position</h2>
+    <!-- content related to player position -->
+    <div class="image-container">
+        <img src="player-position-image.jpeg" alt="Player Position Image">
+        <div class="dropdown-content">
+            <p><strong>Goalkeeper:</strong> The goalkeeper's main role is to prevent the opposing team from scoring by defending the goal.</p>
+            <p><strong>Defender:</strong> Defenders are responsible for protecting their team's goal and stopping the opposing team's attackers.</p>
+            <p><strong>Midfielder:</strong> Midfielders play a key role in controlling the flow of the game, both defensively and offensively.</p>
+            <p><strong>Forward:</strong> Forwards, also known as strikers, are primarily responsible for scoring goals.</p>
+            <p><strong>Winger:</strong> Wingers play wide on the field and are responsible for delivering crosses into the opposition's penalty area and scoring goals.</p>
+            <p><strong>Full-back:</strong> Full-backs play on either side of the defense and are responsible for defending against opposing wingers and providing support to the midfield.</p>
+            <!-- Add more positions as needed -->
+        </div>
+    </div>
+</section>
+
+<section id="game-rules">
+    <h2>Game Rules</h2>
+    <!-- content related to game rules -->
+    <div class="image-container">
+        <img src="game-rules-image.jpeg" alt="Game Rules Image">
+        <div class="dropdown-content">
+            <p><strong>Offside:</strong> A player is in an offside position if they are nearer to the opponent's goal line than both the ball and the second-last opponent when the ball is played to them, unless they are in their own half of the field.</p>
+            <p><strong>Fouls:</strong> Various fouls can occur during a football match, including tripping, pushing, and handling the ball with hands (except for the goalkeeper within their penalty area).</p>
+            <p><strong>Penalties:</strong> Penalties are awarded for serious fouls committed inside the penalty area. It involves a direct free-kick taken from the penalty spot, with only the goalkeeper to beat.</p>
+            <!-- Add more rules as needed -->
+        </div>
+    </div>
+</section>
+
+<section id="top-players">
+    <h2>Top Players</h2>
+    <!-- content related to top players -->
+    <div class="image-container">
+        <img src="top-players-image.jpeg" alt="Top Players Image">
+        <div class="dropdown-content">
+            <p><strong>Lionel Messi:</strong> Considered one of the greatest players of all time, Messi has won numerous Ballon d'Or awards and set numerous records in club and international football.</p>
+            <p><strong>Cristiano Ronaldo:</strong> Another contender for the title of the greatest player, Ronaldo has won multiple Ballon d'Or awards and achieved great success with clubs like Manchester United, Real Madrid, and Juventus.</p>
+            <p><strong>Pele:</strong> A Brazilian football legend, Pele is known for his incredible goal-scoring ability and has won multiple FIFA World Cups with the Brazilian national team.</p>
+            <!-- Add more players and their achievements as needed -->
+        </div>
+    </div>
+</section>
+
+<section id="quick-facts" class="quick-facts">
+    <h2>Quick Facts</h2>
+    <button onclick="revealFact()">Reveal Random Fact</button>
+    <!-- quick facts content here -->
+    <p>Quick Facts add a touch of fun and knowledge, providing intriguing snippets about football that you might not know. Uncover hidden gems and fascinating trivia to share with your fellow football enthusiasts!</p>
+    <img src="quick-facts-image.png" alt="Quick Facts Image">
+</section>
+
+<section>
+    <div class="flip-container">
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2>Mission</h2>
+                    <p>Our mission is to educate and promote the love for football.</p>
+                </div>
+                <div class="flip-box-back">
+                    <h2>Vision</h2>
+                    <p>Our vision is a world where everyone appreciates and plays football.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="contact-feedback">
+    <button>Contact Us</button>
+    <button>Feedback</button>
+</div>
+
+<script>
+    function revealFact() {
+        // logic to reveal a random football fact
+        alert("Did you know: Football is the world's most popular sport!");
+    }
+</script>
+
+</body>
+</html>

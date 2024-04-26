@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sign-in Form -->
+    <form id="signinForm">
+        <h2>Sign In</h2>
+        <label for="signinUsername">Username:</label>
+        <input type="text" id="signinUsername" name="signinUsername" required>
+
+        <label for="signinPassword">Password:</label>
+        <input type="password" id="signinPassword" name="signinPassword" required>
+
+        <button type="submit">Sign In</button>
+    </form>
+
+    <!-- Sign-up Form -->
+    <form id="signupForm">
+        <h2>Sign Up</h2>
+        <label for="signupUsername">Username:</label>
+        <input type="text" id="signupUsername" name="signupUsername" required>
+
+        <label for="signupEmail">Email:</label>
+        <input type="email" id="signupEmail" name="signupEmail" required>
+
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" name="signupPassword" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <!-- Registration Form -->
+    <form id="registrationForm">
+        <h2>Registration</h2>
+        <label for="regFirstName">First Name:</label>
+        <input type="text" id="regFirstName" name="regFirstName" required>
+
+        <label for="regLastName">Last Name:</label>
+        <input type="text" id="regLastName" name="regLastName" required>
+
+        <label for="regEmail">Email:</label>
+        <input type="email" id="regEmail" name="regEmail" required>
+
+        <label for="regPassword">Password:</label>
+        <input type="password" id="regPassword" name="regPassword" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment</title>
+    <style>
+        /* Same CSS as Company Profile page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #004d99, #003366);
+            color: #fff;
+        }
+
+        header {
+            background: rgba(0, 0, 50, 0.7);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #66a3ff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #008080;
+        }
+
+        .heading-bar {
+            background-color: #002b80;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header {
+            background-color: #002b80;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #66a3ff;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .section p {
+            text-align: justify;
+            color: #fff;
+        }
+
+        /* Form styles */
+        form {
+            background-color: #002b80;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #001f3f; /* Navy Blue */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #003366; /* Darker Navy Blue */
+        }
+
+        /* Score display styles */
+        #score {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #answers {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="heading-bar">
+    <h1>Assessment</h1>
+    <!-- Navigation bar -->
+    <nav>
+        <a href="company-profile.html">Company Profile</a>
+        <a href="course-registration.html">Course Registration</a>
+        <a href="interactive-learning.html">Interactive Learning</a>
+        <a href="assessment.html">Assessment</a>
+        <a href="feedback-contact.html">Feedback & Contact</a>
+    </nav>
+    <!-- End of navigation bar -->
+</div>
+
+<div class="container">
+    <form id="quizForm" onsubmit="return calculateScore()">
+        <div class="question">
+            <h3>Question 1:</h3>
+            <p>Who won the FIFA World Cup in 2018?</p>
+            <label><input type="radio" name="q1" value="a">France</label>
+            <label><input type="radio" name="q1" value="b">Brazil</label>
+            <label><input type="radio" name="q1" value="c">Germany</label>
+            <label><input type="radio" name="q1" value="d">Argentina</label>
+        </div>
+
+        <div class="question">
+            <h3>Question 2:</h3>
+            <p>Which player has won the most Ballon d'Or awards?</p>
+            <label><input type="radio" name="q2" value="a">Lionel Messi</label>
+            <label><input type="radio" name="q2" value="b">Cristiano Ronaldo</label>
+            <label><input type="radio" name="q2" value="c">Pelé</label>
+            <label><input type="radio" name="q2" value="d">Diego Maradona</label>
+        </div>
+
+        <!-- Add more questions here -->
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>Question 3:</h3>
+            <p>Which country has won the most FIFA World Cup titles?</p>
+            <label><input type="radio" name="q3" value="a">Brazil</label>
+            <label><input type="radio" name="q3" value="b">Germany</label>
+            <label><input type="radio" name="q3" value="c">Italy</label>
+            <label><input type="radio" name="q3" value="d">Argentina</label>
+        </div>
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>Question 4:</h3>
+            <p>Who is the all-time top goalscorer in the UEFA Champions League?</p>
+            <label><input type="radio" name="q4" value="a">Cristiano Ronaldo</label>
+            <label><input type="radio" name="q4" value="b">Lionel Messi</label>
+            <label><input type="radio" name="q4" value="c">Raúl</label>
+            <label><input type="radio" name="q4" value="d">Karim Benzema</label>
+        </div>
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>Question 5:</h3>
+            <p>Which country won the first ever FIFA World Cup?</p>
+            <label><input type="radio" name="q5" value="a">Uruguay</label>
+            <label><input type="radio" name="q5" value="b">Argentina</label>
+            <label><input type="radio" name="q5" value="c">Brazil</label>
+            <label><input type="radio" name="q5" value="d">Germany</label>
+        </div>
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>Question 6:</h3>
+            <p>Which club has won the most UEFA Champions League titles?</p>
+            <label><input type="radio" name="q6" value="a">Real Madrid</label>
+            <label><input type="radio" name="q6" value="b">FC Barcelona</label>
+            <label><input type="radio" name="q6" value="c">AC Milan</label>
+            <label><input type="radio" name="q6" value="d">Bayern Munich</label>
+        </div>
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>Question 7:</h3>
+            <p>Who is the youngest player to score in the UEFA Champions League?</p>
+            <label><input type="radio" name="q7" value="a">Raúl</label>
+            <label><input type="radio" name="q7" value="b">Kylian Mbappé</label>
+            <label><input type="radio" name="q7" value="c">Cristiano Ronaldo</label>
+            <label><input type="radio" name="q7" value="d">Lionel Messi</label>
+        </div>
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>Question 8:</h3>
+            <p>Who is the all-time top scorer in the English Premier League?</p>
+            <label><input type="radio" name="q8" value="a">Alan Shearer</label>
+            <label><input type="radio" name="q8" value="b">Wayne Rooney</label>
+            <label><input type="radio" name="q8" value="c">Sergio Agüero</label>
+            <label><input type="radio" name="q8" value="d">Thierry Henry</label>
+        </div>
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>Question 9:</h3>
+            <p>Who is the manager with the most UEFA Champions League titles?</p>
+            <label><input type="radio" name="q9" value="a">Zinedine Zidane</label>
+            <label><input type="radio" name="q9" value="b">Sir Alex Ferguson</label>
+            <label><input type="radio" name="q9" value="c">Pep Guardiola</label>
+            <label><input type="radio" name="q9" value="d">Carlo Ancelotti</label>
+        </div>
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>Question 10:</h3>
+            <p>Which country has hosted the most FIFA World Cup tournaments?</p>
+            <label><input type="radio" name="q10" value="a">Italy</label>
+            <label><input type="radio" name="q10" value="b">Brazil</label>
+            <label><input type="radio" name="q10" value="c">France</label>
+            <label><input type="radio" name="q10" value="d">Germany</label>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="score"></div>
+</div>
+
+<script>
+    function calculateScore() {
+        var score = 0;
+        var questions = document.querySelectorAll('.question');
+        var answers = ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']; // Define correct answers here
+        var userAnswers = [];
+
+        for (var i = 0; i < questions.length; i++) {
+            var radios = questions[i].querySelectorAll('input[type=radio]:checked');
+            if (radios.length > 0) {
+                userAnswers.push(radios[0].value);
+                if (radios[0].value === answers[i]) {
+                    score++;
+                }
+            } else {
+                userAnswers.push(null);
+            }
+        }
+
+        var scoreDisplay = document.getElementById('score');
+        scoreDisplay.innerHTML = 'Your Score: ' + score + '/' + questions.length;
+
+        // Display correct and wrong answers
+        var answersDisplay = document.createElement('div');
+        answersDisplay.id = 'answers';
+        answersDisplay.innerHTML = '<h3>Answers:</h3>';
+        for (var i = 0; i < questions.length; i++) {
+            var answer = document.createElement('p');
+            answer.textContent = 'Question ' + (i + 1) + ': ';
+            if (userAnswers[i] === answers[i]) {
+                answer.textContent += 'Correct';
+            } else {
+                answer.textContent += 'Wrong';
+            }
+            answersDisplay.appendChild(answer);
+        }
+        scoreDisplay.parentNode.insertBefore(answersDisplay, scoreDisplay.nextSibling);
+
+        return false; // Prevent form submission
+    }
+</script>
+
+</body>
+</html>
