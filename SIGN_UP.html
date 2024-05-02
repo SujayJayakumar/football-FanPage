@@ -31,6 +31,7 @@
 
         .form-group {
             margin-bottom: 20px;
+            position: relative; /* Ensure relative positioning for eye button */
         }
 
         label {
@@ -41,12 +42,21 @@
         input[type="text"],
         input[type="email"],
         input[type="password"] {
-            width: 100%;
+            width: calc(100% - 40px); /* Adjust input width to accommodate eye button */
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
             font-size: 16px;
+        }
+
+        /* Adjust eye button position */
+        .eye-btn {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
         }
 
         button[type="submit"] {
@@ -88,10 +98,14 @@
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" required>
+                <!-- Eye button to toggle password visibility -->
+                <span class="eye-btn" onclick="togglePasswordVisibility('password')">&#128065;</span>
             </div>
             <div class="form-group">
                 <label for="confirm-password">Confirm Password:</label>
                 <input type="password" name="confirm-password" id="confirm-password" required>
+                <!-- Eye button to toggle confirm password visibility -->
+                <span class="eye-btn" onclick="togglePasswordVisibility('confirm-password')">&#128065;</span>
             </div>
             <div class="form-group">
                 <button type="submit" name="register">Sign Up</button>
@@ -130,6 +144,16 @@
             }
 
             return true;
+        }
+
+        // Function to toggle password visibility
+        function togglePasswordVisibility(inputId) {
+            var input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
         }
     </script>
 </body>

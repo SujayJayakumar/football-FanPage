@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Registration</title>
     <style>
+        /* CSS styles */
         /* Same CSS as Company Profile page */
         body {
             font-family: Arial, sans-serif;
@@ -75,6 +76,7 @@
             color: #fff;
         }
 
+        input[type="file"],
         input[type="submit"] {
             background-color: #66a3ff;
             color: #fff;
@@ -115,7 +117,6 @@
         nav a:hover {
             color: #008080;
         }
-
     </style>
 </head>
 <body>
@@ -134,7 +135,7 @@
 </div>
 
 <div class="container">
-    <form action="#" method="post" onsubmit="return validateForm()">
+    <form action="#" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -164,6 +165,10 @@
         <div class="form-group">
             <label for="duration">Duration (in weeks):</label>
             <input type="text" id="duration" name="duration" required>
+        </div>
+        <div class="form-group">
+            <label for="id-proof">Upload ID Proof:</label>
+            <input type="file" id="id-proof" name="id-proof" accept=".pdf,.jpg,.jpeg,.png" required>
         </div>
         <div class="form-group">
             <input type="submit" value="Submit">
